@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
 	all_init();
-	
-	
+		
 	return 0;
 }

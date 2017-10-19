@@ -1,3 +1,15 @@
+void init_bit_mask()
+{
+	memset(set_mask, 0ULL, sizeof(set_mask));
+	memset(set_mask, 0ULL, sizeof(clear_mask));
+
+	for(int i = 0; i < 64; i++)
+	{
+		set_mask[i] |= (1ULL << i);       // initailize 1 for given pos and elsewhere 0
+		clear_mask[i] = ~set_mask[i];     // initailize 0 for given pos and elsewhere 1         
+	}
+}
+
 void initsq120to64()
 {
 	int count = 0, sq;              // count will give value from 0 to 63
@@ -25,4 +37,5 @@ void initsq120to64()
 void all_init()
 {
 	initsq120to64();
+	init_bit_mask();	
 }

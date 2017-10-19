@@ -103,11 +103,19 @@ typedef struct {
 
 #define SQ64(sq120) (sq120tosq64[sq120])   // function call using micro to get 64 indexed value of board
 
+#define clear_bit(bb, sq) ((bb) &= clear_mask[sq])    // on given position there will be 0 in clear_mask[sq], after doing & operation that will be unset 1 & 0 = 0
+
+#define set_bit(bb, sq) ((bb) |= set_mask[sq])		// on given position there will be 1 in set_mask[sq], after doing | operation that will be set 1 | 0 = 0
+
 
 // GLOBALS
 
 int sq120tosq64[board_square];             // store value of board in 64 indexed base
 int sq64tosq120[64];					// store value of board in 120 indexed base
+
+U64 clear_mask[64];                 // store 0 on given pos
+
+U64 set_mask[64];               // store 1 on given pos
 
 
 // FUNCTIONS
