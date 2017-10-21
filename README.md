@@ -28,4 +28,19 @@ ABOUT PROJECT :-
 
 ![Bit Board](img/offset-representaion.jpg)
 
+								c) Hash key or Position key: in this part , from given situation a unique has key is generated. 
+
+								d) FEN notation: a unique notation for chess board which talks with GUI(arena) using UCI protocol.
+									
+													e.g.: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+										
+												a) parsing is done for given string and set all variables of board for that string
+
+												b) printing board for the given FEN notation 
+
+												NOTE :-> before FEN notation all variable has been reset to default initial value
+													
+
+ 
+
 				    
